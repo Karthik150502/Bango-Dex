@@ -28,13 +28,13 @@ export default function MobNav({ scrollToHash }: { scrollToHash: (id: string) =>
                 <div className="h-[calc(100vh-72px)] flex-col items-center justify-between overflow-y-auto">
                     <SheetClose asChild>
                         <section className='border-none flex flex-col text-white gap-y-2 p-2 pt-8'>
-                            <div className='flex flex-1 flex-col gap-2'>
+                            <div className='flex flex-1 flex-col gap-x-2 gap-y-4'>
 
                                 {
                                     NAV_BAR_ITEMS.map((item) => {
                                         return <SheetClose key={item.to} asChild>
                                             <Link href={"#"} onClick={() => scrollToHash(item.to)} className={cn("flex gap-x-2 p-1 items-center justify-between w-full hover:scale-105  duration-400 origin-center transition-all hover:duration-300 ")}>
-                                                <p className='text-white text-xs'>{item.label}</p>
+                                                <p className='text-white text-base'>{item.label}</p>
                                             </Link>
                                         </SheetClose>
                                     })
